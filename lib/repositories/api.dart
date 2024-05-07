@@ -11,7 +11,7 @@ class API {
   Future<Response?> sendImage(BuildContext context, File imageFile) async {
     Dio dio = Dio();
 
-    String url = 'http://192.168.1.16:8000/api/v1/uploads/image';
+    String url = 'https://natours-8p4c.onrender.com/api/v1/uploads/image';
 
     FormData formData = FormData.fromMap({
       'image': await MultipartFile.fromFile(

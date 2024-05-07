@@ -39,6 +39,8 @@ dependencies:
   google_fonts: ^6.2.1
   flutter_screenutil: ^5.9.0
   flutter_svg: ^2.0.10+1
+  camera: ^0.10.6
+  face_camera: ^0.1.0
 
 dev_dependencies:
   flutter_test:

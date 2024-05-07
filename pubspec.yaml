@@ -41,6 +41,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   camera: ^0.10.6
   face_camera: ^0.1.0
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:

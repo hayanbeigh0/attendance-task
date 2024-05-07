@@ -1,12 +1,15 @@
 import 'package:attendance/logic/cubit/send_image_cubit.dart';
+import 'package:attendance/logic/progress_cubit/progress_cubit.dart';
 import 'package:attendance/screens/face_capture.dart';
 import 'package:attendance/utils/colors.dart';
+import 'package:face_camera/face_camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await FaceCamera.initialize();
   runApp(const MyApp());
 }
 
@@ -21,6 +24,11 @@ class MyApp extends StatelessWidget {
         BlocProvider<SendImageCubit>(
           create: (context) {
             return SendImageCubit();
+          },
+        ),
+        BlocProvider<ProgressCubit>(
+          create: (context) {
+            return ProgressCubit();
           },
         ),
       ],

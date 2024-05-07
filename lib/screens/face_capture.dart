@@ -65,7 +65,6 @@ class FaceCapture extends StatelessWidget {
       ),
       bottomNavigationBar: BottomButton(
         onPressed: () async {
-          await FaceCamera.initialize();
           Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => FaceScan(),
           ));
